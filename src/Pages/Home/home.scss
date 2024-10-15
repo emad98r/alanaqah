@@ -28,12 +28,10 @@
       @include breakPoints(mobile) {
         padding: 0;
       }
-      h1 {
-        font-family: "titleFont";
-        font-size: 10em;
-        color: var(--light-color);
+      .big-title {
+        width: 20%;
         @include breakPoints(mobile) {
-          font-size: 5em;
+          width: 50%;
         }
       }
       p {

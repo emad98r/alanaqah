@@ -3,13 +3,13 @@ import MostOrdered from "../../Sections/MostOrdered";
 import "./home.scss";
 import { Link } from "react-router-dom";
 import ContactUs from "../../Sections/ContactUs/ContactUs";
-
+import HeroLogo from "../../assets/icons/hero logo .png";
 function Home() {
   return (
     <div className="home">
       <div className="hero">
         <div className="hero-wrapper">
-          <h1 className="big-title">الأناقة</h1>
+          <img className="big-title" src={HeroLogo} alt="" />
           <p> ليست مجرد خيار، بل هو أسلوب حياة.</p>
         </div>
       </div>

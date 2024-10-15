@@ -12,7 +12,7 @@ footer {
   @include breakPoints(small) {
     margin-top: 8em;
   }
-  img {
+  .wave {
     @include breakPoints(mobile) {
       position: absolute;
       top: -2.5em;
@@ -29,12 +29,10 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    .logo {
-      font-size: 10em;
-      font-family: "titleFont";
-      color: var(--sub-color);
+    .footer-logo {
+      width: 15%;
       @include breakPoints(mobile) {
-        font-size: 7em;
+        width: 40%;
       }
     }
     ul {

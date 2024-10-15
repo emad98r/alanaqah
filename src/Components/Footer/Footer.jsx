@@ -3,13 +3,13 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import wave from "../../assets/icons/wave.svg";
-
+import FooterLogo from "../../assets/icons/footer logo.png";
 function Footer() {
   return (
     <footer>
-      <img src={wave} alt="" />
+      <img className="wave" src={wave} alt="" />
       <div className="footer-wrapper">
-        <h1 className="logo">الأناقة</h1>
+        <img className="footer-logo" src={FooterLogo} alt="" />
         <ul>
           <li>
             <FaFacebookF />

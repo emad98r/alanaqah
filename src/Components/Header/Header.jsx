@@ -23,7 +23,7 @@ function Header() {
     <header>
       <div className="container">
         <Link to="/" className="logo">
-          الاناقة
+          الأناقة
         </Link>
 
         {/* Menu Icon for smaller screens */}
