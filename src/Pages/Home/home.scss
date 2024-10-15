@@ -1,0 +1,114 @@
+@import "../../Components/breakPoints.scss";
+.home {
+  width: 100%;
+  .hero {
+    width: 100%;
+    background-image: url("../../assets/imgs/hero\ bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    background-position: center;
+    @include breakPoints(mobile) {
+      background-image: url("../../assets/imgs/hero\ bg.jpeg");
+      background-position: right;
+    }
+    @include breakPoints(small) {
+      background-image: url("../../assets/imgs/hero\ bg.jpeg");
+      background-position: right;
+    }
+    .hero-wrapper {
+      width: 100%;
+      height: inherit;
+      background-color: #00000087;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 20em;
+      @include breakPoints(mobile) {
+        padding: 0;
+      }
+      h1 {
+        font-family: "titleFont";
+        font-size: 10em;
+        color: var(--light-color);
+        @include breakPoints(mobile) {
+          font-size: 5em;
+        }
+      }
+      p {
+        font-size: 2em;
+        color: var(--sub-color);
+        @include breakPoints(mobile) {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  .categories {
+    width: 100%;
+    margin-top: 2em;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include breakPoints(mobile) {
+        // flex-direction: column;
+        flex-wrap: wrap;
+      }
+      a {
+        width: 100%;
+        height: auto;
+        margin: 0 0.5em;
+        border-radius: 20px;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include breakPoints(mobile) {
+          margin: 0.5em;
+          width: 45%;
+        }
+        &:hover {
+          b {
+            transition: all 0.3s ease-out;
+            background-color: var(--main-color);
+          }
+        }
+        b {
+          font-size: 1.5em;
+          background-color: rgba(0, 0, 0, 0.451);
+          width: 100%;
+          height: 5em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 20px;
+          color: var(--light-color);
+          @include breakPoints(mobile) {
+            height: 3em;
+          }
+          @include breakPoints(small) {
+            height: 3em;
+          }
+        }
+      }
+      .man {
+        background-image: url("../../assets/imgs/man.jpg");
+      }
+      .women {
+        background-image: url("../../assets/imgs/woman.jpg");
+      }
+      .kids {
+        background-image: url("../../assets/imgs/kid.jpg");
+      }
+      .shoes {
+        background-image: url("../../assets/imgs/shose.jpg");
+        background-position: center;
+      }
+      .accessories {
+        background-image: url("../../assets/imgs/Accessories.jpg");
+        background-position: center;
+      }
+    }
+  }
+}

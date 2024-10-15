@@ -1,0 +1,105 @@
+@import "../Components/breakPoints.scss";
+.home-sections {
+  width: 100%;
+  margin: 2em 0;
+}
+
+.products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1.5em;
+  @include breakPoints(mobile) {
+    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+    gap: 0.5em;
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(197, 197, 197);
+    padding: 1.5em 0.5em;
+    background-color: #f9f9f9;
+    row-gap: 2em;
+    img {
+      max-width: 10em;
+      max-height: 10em;
+      margin-bottom: 1em;
+      display: flex;
+      align-self: center;
+      mix-blend-mode: multiply;
+      @include breakPoints(mobile) {
+        max-width: 7em;
+        max-height: 7em;
+      }
+    }
+    .info {
+      width: 100%;
+      .info-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1em;
+        @include breakPoints(mobile) {
+          flex-direction: column;
+          gap: 1em;
+        }
+        h3 {
+          color: var(--main-color);
+        }
+        p {
+          color: var(--sub-color);
+          font-family: "800";
+          font-size: 1.5em;
+        }
+      }
+      b {
+        color: var(--sub-color);
+        margin-bottom: 0.5em;
+        display: block;
+      }
+      .colors {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        li {
+          width: 1em;
+          height: 1em;
+          border-radius: 50%;
+          box-shadow: 0 1px 3px rgb(156, 155, 155);
+          margin: 0 0.5em;
+          cursor: pointer;
+        }
+      }
+      .sizes {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+
+        li {
+          width: 2.5em;
+          height: 1.5em;
+          border-radius: 15px;
+          box-shadow: 0 0 5px gainsboro;
+          margin: 0 0.5em;
+          background-color: var(--dark-color);
+          color: var(--light-color);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          cursor: pointer;
+          @include breakPoints(mobile) {
+            font-size: 0.7em;
+          }
+          &:hover {
+            background-color: var(--sub-color);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "./Components/breakPoints.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "400";
+}
+html {
+  direction: rtl;
+}
+
+:root {
+  --main-color: #800000;
+  --sub-color: #c07830;
+  --light-color: #ebe5e5;
+  --dark-color: #000000;
+}
+
+@font-face {
+  font-family: titleFont;
+  src: url(./assets/fonts/Title-Font.ttf);
+}
+@font-face {
+  font-family: "400";
+  src: url(./assets/fonts/Beiruti-Medium.ttf);
+}
+@font-face {
+  font-family: "600";
+  src: url(./assets/fonts/BEIRUTI-BLACK.TTF);
+}
+@font-face {
+  font-family: "800";
+  src: url(./assets/fonts/BEIRUTI-EXTRABOLD.TTF);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+  @include breakPoints(mobile) {
+    width: 100%;
+  }
+  @include breakPoints(small) {
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

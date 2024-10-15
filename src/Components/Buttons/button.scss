@@ -1,0 +1,17 @@
+button {
+  padding: 0.5em;
+  border-radius: 30px;
+  background-color: var(--main-color);
+  color: var(--light-color);
+  border: none;
+  outline: none;
+  user-select: none;
+  font-size: 1.2em;
+  width: 100%;
+  margin: 0.5em 0;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--dark-color);
+  }
+}

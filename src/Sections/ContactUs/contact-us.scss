@@ -1,0 +1,92 @@
+@import "../../Components/breakPoints.scss";
+.contact-us {
+  margin: 2em 0;
+  width: 100%;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contact-us-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 2em;
+      @include breakPoints(mobile) {
+        flex-direction: column;
+      }
+      form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+        input,
+        textarea {
+          border: none;
+          outline: none;
+          background-color: rgb(230, 230, 230);
+          padding: 0.5em 1em;
+          margin-bottom: 0.5em;
+          border-radius: 30px;
+          color: var(--main-color);
+          font-size: 1.2em;
+          resize: none;
+        }
+        input[type="tel"] {
+          direction: rtl;
+        }
+        select {
+          width: 100%;
+          margin-bottom: 0.5em;
+          border: none;
+          outline: none;
+          background-color: rgb(230, 230, 230);
+          padding: 0.5em 1em;
+          margin-bottom: 0.5em;
+          border-radius: 30px;
+          color: var(--main-color);
+          font-size: 1.2em;
+          option {
+            color: var(--sub-color);
+          }
+        }
+        .choose-inputs {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          gap: 0.5em;
+
+          input {
+            width: 100%;
+          }
+        }
+        .buttons {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5em;
+          button:nth-of-type(2) {
+            background-color: var(--sub-color);
+            &:hover {
+              background-color: var(--light-color);
+              color: var(--main-color);
+            }
+          }
+        }
+      }
+
+      iframe {
+        width: 50%;
+        border-radius: 30px;
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

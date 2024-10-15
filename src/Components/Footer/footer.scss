@@ -1,0 +1,65 @@
+@import "../breakPoints.scss";
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--light-color);
+  position: relative;
+  @include breakPoints(mobile) {
+    margin-top: 3em;
+  }
+  @include breakPoints(small) {
+    margin-top: 8em;
+  }
+  img {
+    @include breakPoints(mobile) {
+      position: absolute;
+      top: -2.5em;
+    }
+    @include breakPoints(small) {
+      position: absolute;
+      top: -5.5em;
+    }
+  }
+  .footer-wrapper {
+    padding: 0 0 2em;
+    background-color: var(--dark-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .logo {
+      font-size: 10em;
+      font-family: "titleFont";
+      color: var(--sub-color);
+      @include breakPoints(mobile) {
+        font-size: 7em;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2em;
+      svg {
+        font-size: 1.5em;
+        margin: 0 0.5em;
+        &:hover {
+          color: var(--sub-color);
+          cursor: pointer;
+        }
+      }
+    }
+    p {
+      font-size: 1.2em;
+      color: var(--light-color);
+      a {
+        color: var(--light-color);
+        cursor: pointer;
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+}

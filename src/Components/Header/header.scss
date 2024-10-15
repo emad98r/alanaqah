@@ -1,0 +1,93 @@
+@import "../breakPoints.scss";
+
+header {
+  width: 100%;
+  background-color: var(--light-color);
+  padding: 0.5em 1em; // Fixed padding
+  position: relative;
+  border-bottom: 2px solid var(--main-color);
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  @include breakPoints(small) {
+    padding: 0.5em;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-family: "titleFont";
+      font-size: 3.5em;
+      color: var(--main-color);
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      z-index: 10;
+
+      // Mobile behavior
+      @include breakPoints(mobile) {
+        position: absolute;
+        top: 7.4em;
+        left: 0;
+        flex-direction: column;
+        background-color: var(--light-color);
+        width: 100%;
+        display: none; // Hidden by default on mobile
+      }
+
+      // When menu is open on mobile
+      &.nav-open {
+        display: flex; // Show when 'nav-open' class is applied
+      }
+
+      a {
+        padding: 0.5em 1em;
+        color: var(--main-color);
+        font-family: "800";
+        font-size: 1.2em;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 1px;
+          background-color: var(--sub-color);
+          transition: all 0.2s linear;
+        }
+
+        &:hover {
+          color: var(--sub-color);
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu,
+.cancel {
+  display: none;
+  font-size: 1.5em;
+  color: var(--main-color);
+
+  // Show the icons only on mobile
+  @include breakPoints(mobile) {
+    display: block;
+    cursor: pointer;
+  }
+}
